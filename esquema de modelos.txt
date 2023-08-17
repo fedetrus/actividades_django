@@ -1,0 +1,139 @@
+################################################################################
+                            Empresa
+
+Nombre          (DataPrima)
+Tag             (DP)
+Domicilio
+Correo
+Cuil
+Estado          (Abierto, Cerrado...)
+Empleados       (FK Usuarios)
+Clientes        (FK Clientes.nombre)
+Proyectos       (FK Proyectos.nombre)
+Area            (FK Areas.area)
+
+########################################
+                Areas
+
+Id
+Area            (Dirección, RRHH, Administración, Digitalización, IT, Sistemas, Centro de Carga)
+
+################################################################################
+
+################################################################################
+                            Usuarios
+Id              (00011)
+Nombre Apellido
+Area            (FK Empresa.areas)
+Actividad       (FK Actividades.actividad)
+Perfil          (FK Perfiles.perfil)
+Estado          (Vacaciones, Licencia, Baja, Activo...)
+Ubicación
+Correo
+Domicilio
+
+########################################
+                Perfiles
+
+Id
+Perfil          (Escaneador, Editor, Desarrollador, Técnico, Destrucción, Preparador, DataEntry, Verificador, Dirección,
+                 Administración, Supervisor, Auditor de edición... )
+
+################################################################################
+
+
+################################################################################
+                            Actividades
+
+Id              (00523)
+Fecha creación  (Se crea automaticamente con estado de Nuevo)
+Actividad       (FK Actividades.actividad)
+Inicio          (Fecha y hora de inicio)
+Estado          (FK Estados.estado)
+Asignado por    (Usuario que asigna la tarea)
+Asignado a      (Usuario al cual le fue designada la tarea)
+Fin             (Fecha y hora de finalización)
+Porcentaje
+Tiempo          (Tiempo entre que se dio curso hasta que se finalizó)
+Proyecto        (Tag del proyecto)
+
+########################################
+                Estados
+
+Estado          (Nuevo, En Espera, En Curso, Pausa, Finalizado, Cerrado)
+
+########################################
+                Actividades
+
+Actividad       (Escaneo, Edición, OCR, Redimensionado, Preparado, Destrucción,
+                 Armado, Traslado, Carga, Codificación, Visita, Relevamiento...)
+
+########################################
+                Prioridades
+
+Prioridad          (Baja, Normal, Alta, Urgente)
+
+################################################################################
+
+
+################################################################################
+                            Proyectos
+
+Id
+Cliente         (FK Cliente.nombre)
+Nombre
+Tag
+Fecha creación
+Inicio
+Fin
+Etapa           (FK Etapas)
+Proceso         (FK Procesos)
+Estado          (FK Estados.estado)
+Porcentaje
+Tiempo
+Actividades     (FK Actividades)
+
+########################################
+                Etapas
+
+Etapa          (Preparación, Digitalización, Edición, Destrucción...)
+
+########################################
+                Procesos
+
+Proceso          (Desarmado, Escaneo, Edición, Estandarización, Destrucción)
+Etapa            (FK Etapas.etapa)
+
+########################################
+                Estados
+
+Estado          (Nuevo, En Espera, En Curso, Pausa, Finalizado, Cerrado)
+
+################################################################################
+                            Clientes
+
+Id
+Nombre
+Tag
+Domicilio
+Correo
+Cuil
+Teléfono
+Proyectos       (FK Proyectos all)
+
+################################################################################
+
+
+################################################################################
+                            Porcentajes
+
+Porcentaje      (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+
+################################################################################
+
+
+
+
+
+
+
