@@ -60,7 +60,7 @@ Proyecto        (Tag del proyecto)
 ########################################
                 Estados
 
-Estado          (Nuevo, En Espera, En Curso, Pausa, Finalizado, Cerrado)
+Estado          (Nuevo, En Espera, En Curso, Pausa, Finalizado, Cerrado, Rechazado)
 
 ########################################
                 Actividades
